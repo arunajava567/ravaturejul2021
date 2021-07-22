@@ -1,0 +1,31 @@
+package test.set2021;
+
+1)create custom exception InvoidCodeException 
+2) 
+
+class Repository{
+	static String getCountryName(String countryCode) throws InvalidCodeException{ 
+
+//70 to 99  -India
+//908 = US
+
+//011      -Dial somewhere outside of USA 
+
+// No country with given code found
+		;
+		
+	
+ }
+	
+}
+
+public  class RepositoryImplementation {
+	
+	public static void main(String[] args)throws Exception {
+		Repository r=new Repository();
+		System.out.println(r.getCountryName("80"));
+	
+	}
+}
+
+
