@@ -1,0 +1,37 @@
+DDL:
+
+create database revaturefsd1;
+
+use revaturefsd1;
+
+show tables;
+
+create table customer(id int,name varchar(20));
+
+create table customernew(id int,name varchar(20),address varchar(20));
+
+drop table customer;
+
+describe customernew;
+
+alter table customernew add city varchar(20);
+
+alter table customernew drop column city;
+
+create table customer1234 as select * from customernew; 
+select * from customer1234;
+insert into customer1234(id) values(234);
+insert into customer1234(name) values("ram123");
+insert into customer1234 values(300,'Sai');
+insert into customer1234(name,id) values('sai300',302);
+update customer1234 set name='xxx';
+update customer1234 set name='xxx' where id=234;
+
+alter table customernew modify name varchar(50);
+
+insert into customernew values(101,'ram'),(102,'raj'),(103,'kiran');
+
+select * from customernew;
+
+truncate table customernew;
+
