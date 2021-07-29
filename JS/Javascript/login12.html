@@ -1,0 +1,61 @@
+<html>
+
+/* document.getElementById("p1")  - userid jeya123 and 
+   password should be jeya123 then alert valid user 
+    else invalid user*/
+
+
+
+<script language="javascript">
+  function  validate()
+  {
+   if(document.f.p1.value.length<4)
+     alert(" id should be more than 4 characters");
+   if(document.f.p2.value.length<6)
+     alert(" password should be more than 6 characters");
+
+    if((document.f.p1.value=='jeya123') && (document.f.p2.value=='jeya123'))
+        alert('valid user');
+     else
+      alert('invalid user');
+
+
+let i = 0;
+while (i < 5) { // shows 0, then 1, then 2
+  alert( i );
+  i++;
+}
+for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+  document.writeln(i);
+}
+
+  }
+</script>
+ 
+
+<body bgcolor=pink>
+ 
+<form name=f>
+
+
+<hr>
+
+ <table border= 1 align=center bgcolor=cyan width=150 height=100>
+ 
+    <caption> LOGIN FORM</caption>
+  <tr><td>  USER ID</td><td> <input id="p1" type=text name=p1></td>  <tr>
+  <tr><td> PASSWORD </td><td><input type=password name=p2></td><tr>
+  <tr><td>  <input type=submit value="Submit" onClick="validate()">    
+ <td><input type=reset values= Cancel></td>          <tr>
+
+</table>
+
+ </form>
+</body>
+</html>
+
+
+
+
+
+

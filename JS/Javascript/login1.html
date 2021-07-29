@@ -1,0 +1,43 @@
+<html>
+<script language="javascript">
+  function  validate()
+  {
+   if(document.f.p1.value.length<4)
+     alert(" id should be more than 4 characters");
+   if(document.f.p2.value.length<6)
+     alert(" password should be more than 6 characters");
+
+    if(document.f.p1.value=='jeya123') 
+        alert('valid user');
+     else
+      alert('invalid user');
+  }
+</script>
+ 
+
+<body bgcolor=pink>
+ 
+<form name=f>
+
+
+<hr>
+
+ <table border= 1 align=center bgcolor=cyan width=150 height=100>
+ 
+    <caption> LOGIN FORM</caption>
+  <tr><td>  USER ID</td><td> <input type=text name=p1></td>  <tr>
+  <tr><td> PASSWORD </td><td><input type=password name=p2></td><tr>
+  <tr><td>  <input type=submit value="Submit" onClick="validate()">    
+ <td><input type=reset values= Cancel></td>          <tr>
+
+</table>
+
+ </form>
+</body>
+</html>
+
+
+
+
+
+
