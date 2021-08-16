@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+<bean id="q" class="com.capgemini.Question">  
+<constructor-arg value="111"></constructor-arg>  
+<constructor-arg value="What is java?"></constructor-arg>  
+<constructor-arg>  
+<list>  
+	<value>Java is a programming language</value>  
+	<value>Java is a Platform</value>  
+	<value>Java is an Island of Indonasia</value>  
+</list>  
+</constructor-arg>  
+</bean>  
+	
+<bean id="w"  class="com.capgemini.Wheel"  init-method="start" destroy-method="end">
+	<constructor-arg index="0" value="101"/>
+	<constructor-arg index="1" value="898.89"/>
+
+</bean>
+
+<bean id="e"  class="com.capgemini.Engine" autowire="byName">
+	<property name="model" value="Sedan"/>
+</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<bean id="e"  class="com.cg.intro.Engine">
+    <constructor-arg index="0"><value>765432</value></constructor-arg>
+</bean>
+
+<bean id="c"  class="com.cg.intro.Course" scope="prototype" init-method="start" destroy-method="stop">
+   <property name="id"  value="102"/>
+    <property name="name" value="ReactJS"/>
+</bean> -->
