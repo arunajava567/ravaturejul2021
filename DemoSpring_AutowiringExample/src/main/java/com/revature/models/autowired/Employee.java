@@ -1,22 +1,23 @@
 package com.revature.models.autowired;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Component;
 @Component("e")
 public class Employee {
     private int eid;
     private String ename;
    // @Autowired //implicit dependency injection
-    private Department department;
+    private Department department;  //=new Department();
     
     
     
-    @Autowired
+  //  @Autowired
     public Employee(Department department) {
 	super();
 	this.department = department;
 }
-	//@Autowired
-    //@Required
+	@Autowired
+    @Required
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
@@ -38,7 +39,7 @@ public class Employee {
     public void showEployeeDetails(){
         System.out.println("Employee Id : " + eid);
         System.out.println("Employee Name : " + ename);
-        department.setDeptName("Information Technology");
+      //  department.setDeptName("Information Technology");
         System.out.println("Department : " + department.getDeptName());
     }
 }
